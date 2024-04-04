@@ -1,0 +1,13 @@
+release/enemy.o
+release/gamemanager.o
+release/main.o
+release/mainWindow.o
+release/map.o
+release/player.o
+release/tile.o
+release/vector2.o
+release/qrc_Sprites.o
+release/moc_enemy.o
+release/moc_gamemanager.o
+release/moc_mainWindow.o
+release/moc_player.o

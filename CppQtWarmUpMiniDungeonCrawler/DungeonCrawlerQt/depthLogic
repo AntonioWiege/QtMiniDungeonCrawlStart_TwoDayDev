@@ -1,0 +1,3 @@
+From top to bottom, each right to left, makes Z increase.
+The tiles follow their inner logic for their respective depth, in sprite defined order.
+The player and enemy follow that sprite order too, but have to mind adjusting to the specific tile they're on.

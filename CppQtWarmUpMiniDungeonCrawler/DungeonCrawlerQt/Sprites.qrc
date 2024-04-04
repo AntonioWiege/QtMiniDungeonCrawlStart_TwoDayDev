@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/All_DepthIndexed">
+        <file>Sprites/0_FloorBroken.png</file>
+        <file>Sprites/1_Floor.png</file>
+        <file>Sprites/2_Coin.png</file>
+        <file>Sprites/3_WallBackLeft.png</file>
+        <file>Sprites/4_FloorGrass.png</file>
+        <file>Sprites/5_FloorRocks.png</file>
+        <file>Sprites/6_WallLightLeft.png</file>
+        <file>Sprites/7_WallBackRight.png</file>
+        <file>Sprites/8_WallLightRight.png</file>
+        <file>Sprites/9_ManaPotion.png</file>
+        <file>Sprites/10_LifePotion.png</file>
+        <file>Sprites/11_Plant.png</file>
+        <file>Sprites/12_Shop.png</file>
+        <file>Sprites/13_GoalStairs.png</file>
+        <file>Sprites/14_PlayerBottomLeft.png</file>
+        <file>Sprites/15_PlayerTopLeft.png</file>
+        <file>Sprites/16_PlayerTopRight.png</file>
+        <file>Sprites/17_PlayerBottomRight.png</file>
+        <file>Sprites/18_EnemyBottomLeft.png</file>
+        <file>Sprites/19_EnemyTopLeft.png</file>
+        <file>Sprites/20_EnemyTopRight.png</file>
+        <file>Sprites/21_EnemyBottomRight.png</file>
+        <file>Sprites/22_WallFrontLeft.png</file>
+        <file>Sprites/23_WallFrontRight.png</file>
+    </qresource>
+</RCC>

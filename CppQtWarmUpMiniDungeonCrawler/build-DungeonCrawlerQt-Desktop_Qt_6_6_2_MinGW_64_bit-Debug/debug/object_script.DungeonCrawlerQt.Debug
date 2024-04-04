@@ -1,0 +1,13 @@
+debug/enemy.o
+debug/gamemanager.o
+debug/main.o
+debug/mainWindow.o
+debug/map.o
+debug/player.o
+debug/tile.o
+debug/vector2.o
+debug/qrc_Sprites.o
+debug/moc_enemy.o
+debug/moc_gamemanager.o
+debug/moc_mainWindow.o
+debug/moc_player.o

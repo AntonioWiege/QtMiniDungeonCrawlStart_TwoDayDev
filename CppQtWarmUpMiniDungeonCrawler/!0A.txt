@@ -1,0 +1,60 @@
+Top Doc:
+by Antonio Wiege
+
+Goal: Warming up to C++ & Qt and developing the most bare skelleton of a stealth dungeon crawler in under two days time.
+Visual Style: Isometric, Prototypic Render, 2D Sprites, Retro simple as per older genre examples.
+Audio: Few basic sfx where seen fit. Perhaps one own soundtrack to loop during play.
+Game Core:
+You spawn in a generated dungeon.
+You have health & stamina potions and enemies running around.
+Your goal is to reach the stairs, leading to the next level. Endlessly rolling up the rock of gameplay.
+Game Side:
+Perhaps there will be traps and coins.
+Coins would then unlock pointers toward the exit and allow to buy potions from a merchant.
+Deepest run may be saved for score keeping.
+
+Notes:
+The GameLoop is tick based. If input is given pre tick, you will move accordingly. Enemies walk every tick.
+The map is an array of architecture type groups (floor/wall/etc/null) the visual is an orthographic version.
+Could generate the map using these three 
+1) Open cave with pillars. Voronoi based mask with random obstacles.
+2) Room cluster. Square rooms with randomized openings & flood fill force open and connect.
+3) Sewn together. A lot of random walk line segments, starting from the spawn.
+Enemies, when they spot you, will use simple goal first A*, to where they last saw you. Else random walk.
+A* would be taken from one of my previous projects, everything else written from scratch.
+Navigation with mouse will be skipped, since image based button masking is a bother in Qt. Keyboard only.
+
+This is a quick prototyping project so the following will not really be minded, but still, here's a copy of some personal guideline list:
+Think and map a bit, write & take down as your mind goes, clean up & reiterate.
+Backup frequently. Like, right now.
+Short and Simple.
+Don’t repeat.
+Comprehendability > Editability > Readability > Time & Effort
+Extra keyword list for context quick search, references outside.
+Overall Consistency > Tend to apply common guidelines & definitions.
+Take down considerations & ideas. Implement on need.
+Log what you do. Don’t promise anything.
+Keep additional notes, materials & drafts, but outside of the doc.
+Rundown Code prework → wing prototype → implement properly as part of testphase → clean up & release, hopefully in a state that makes it ready to grasp years later.
+Develop in detectable incremental steps. Visible changes.
+[...]
+I found some random argueably philosophical bits in my old doc, apparently I once planned to use them in some short story. I put three of them in here:
+"Don't take info as absolute truth.Compare it to your life, thought & feel. Share it with different perspectives. All language, thought, etc. is relative, subjective, imperfect and a complex compound. So are the resulting attempts to comprehend, consider and communicate. Everything communicated should be supposed to aid. For the better and against the worse."
+"A quick meaning of life? Perhaps these general five. Be good, alive, competent, healthy, happy. In more abstract forms, from a different point of view: Experience and Love. The first to truly feel and understand. The second also means care, respect, take interest and live."
+"As if you’re playing music together, though the instrument is your body and the melody your emotions. There is so much to being together, in each others arms, in love, in life, in the, I currently believe, best."
+---------------------
+The project is over for now. About 10 hours in I stop. A few unexpected issues aside, development went okay, but it was obvious early on, that I wouldn't go for something finished within the two days. The sprites I made ended up looking clean enough to bother with a little more and I lost time on prototyping music, that didn't fit. Even though the way I decided to make this game in Qt wasn't particularly great for it, it would work out well enough for a prototype. Unlikely I'll revisit this.
+I made a hard cut, but a few things should be easy to add, to turn this into a more whole game experience:
+Add the most basic UI to display level count and lifes left.
+On enemy == player pos, destroy enemy and decrement life. On life hit zero safe level to some txt & quit application.
+There is a sample ost file in the folders, add it to resources and instantiate a mediaplayer in Qt. No sfx yet.
+Cut the shop & coins, perhaps the blue potion too.
+Player walking over potions/coins picks them up.
+Add rotated version of the stair sprites.
+When adding linear look ahead of enemies, make them not spot the player if large plant is in the way. Also make the player destroy the plant when walking on it.
+The most important bit: Validate (check & fix) generated map and stop entities from moving through walls.
+[...] the backlog could be large as usual.
+During my quick prototyping, I messed around with the way the map is represented visually and in data. Implementing proper handling of what tiles to be able to move to and what not, is a serious bother. There was no real planning phase for this entire thing and it shows through errors like these.
+If I revisit it, I'll likely restart and also avoid having the player centric camera, instead opting for a map that fits into the screen, because jittering and motion sickness can arise very quickly with the wrong values.
+Thats all for now.
+
